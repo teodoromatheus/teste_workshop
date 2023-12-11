@@ -1,7 +1,11 @@
-import pandas as pd
 import os
 
-def load_dataframe_to_excel (df:pd.DataFrame, nome_arquivo: str, caminho_ouput:str) -> str:
+import pandas as pd
+
+
+def load_dataframe_to_excel(
+    df: pd.DataFrame, nome_arquivo: str, caminho_ouput: str
+) -> str:
     """
     Função para carregar o dataframe final como arquivo excel na pasta de output
 
@@ -12,5 +16,5 @@ def load_dataframe_to_excel (df:pd.DataFrame, nome_arquivo: str, caminho_ouput:s
     if not os.path.exists(caminho_ouput):
         os.makedirs(caminho_ouput)
 
-    df.to_excel(f"{caminho_ouput}/{nome_arquivo}.xlsx", index=False)
+    df.to_excel(f'{caminho_ouput}/{nome_arquivo}.xlsx', index=False)
     return print('ETL realizado com sucesso!')
