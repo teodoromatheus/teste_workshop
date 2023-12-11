@@ -3,15 +3,14 @@ import glob
 from typing import List
 import pandas as pd
 
-"""
-Função para extrair arquivos em excel e transformar em uma lista de Dataframes
-
-args: input_path (str): caminho da pasta com os arquivos brutos
-
-return: lista de dataframes
-"""
-
 def extract_from_excel(path: str) -> List[pd.DataFrame]:
+    """
+    Função para extrair arquivos em excel e transformar em uma lista de Dataframes
+
+    args: input_path (str) - caminho da pasta com os arquivos brutos
+
+    return: lista de dataframes
+    """
     all_files = glob.glob(os.path.join(path,"*.xlsx"))
 
     data_frame_list =  []
