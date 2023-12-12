@@ -1,0 +1,18 @@
+site_name: Workshop Estrutura de Projetos de Dados
+theme:
+  name: material
+  palette:
+    primary: blue
+  languege: pt
+
+repo_name: "teodoromatheus/estrutura_workshop"
+repo_url: "https://github.com/teodoromatheus/teste_workshop.git"
+
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+
+
